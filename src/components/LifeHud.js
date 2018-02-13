@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 
 class LifeHud extends React.Component {
   constructor(props) {
@@ -6,7 +7,11 @@ class LifeHud extends React.Component {
     this.state = {  }
   }
   render() { 
-    return ( <h1>This is the lifehud app</h1> )
+    return ( 
+    <div>
+      <Header />
+    </div>
+  );
   }
 }
  
