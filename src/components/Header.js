@@ -16,9 +16,10 @@ export default class Header extends React.Component{
     }
     render() {
         return (
-            <div>
-                <h1>LIFEHUD</h1>
-                <h2>{moment(this.state.clock).format('h:mm:ss a [\n] dddd')}</h2>
+            <div className="header">
+                <h1 className="header__title">LIFEHUD</h1>
+                <h2>{moment(this.state.clock).format('h:mm:ss a')}<br />{moment(this.state.clock).format('dddd')}</h2>
+                
             </div>
         );
     }
