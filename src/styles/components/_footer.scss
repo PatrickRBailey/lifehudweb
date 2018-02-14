@@ -1,0 +1,28 @@
+.footer {
+    position: fixed;
+    bottom: 0px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: center;
+    width:35%;
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+a {
+    text-decoration: none;
+    color: $light-gray;
+    padding: 2rem;
+}
+
+a.active {
+    color: white;
+}
