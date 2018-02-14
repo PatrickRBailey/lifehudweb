@@ -16,7 +16,9 @@ class LifeHud extends React.Component {
     this.setState((prevState) => ({
       page: prevState.page === 'HUD'? 'EDIT': 'HUD'
     }));
+
   };
+
 
   render() { 
     return ( 

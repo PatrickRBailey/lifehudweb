@@ -1,25 +1,33 @@
 import React from 'react';
 
-const Footer = (props) => (
 
-    <div className="footer">
-            <a
-                className={props.page === 'HUD'?"active":""}
+const Footer = (props) => 
+{
+    console.log(props.page === 'HUD');
+    return (
+
+        <div className="footer">
+            <button
+                className={props.page === 'HUD' ? "active" : ""}
                 href="#"
                 onClick={props.handleModeSwitch}
+                disabled={props.page === 'HUD' ? true : false}
             >
                 HUD MODE
-            </a>
-            <a
+            </button>
+            <button
                 className={props.page === 'EDIT' ? "active" : ""}
                 href="#"
                 onClick={props.handleModeSwitch}
+                disabled={props.page === 'EDIT' ? true : false}
             >
-                
+
                 EDIT MODE
-            </a>
-        
-    </div>
-);
+            </button>
+
+        </div>
+    );
+}
+
 
 export default Footer;

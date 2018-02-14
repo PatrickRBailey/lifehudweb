@@ -17,12 +17,14 @@
     font-weight: 200;
 }
 
-a {
+button {
     text-decoration: none;
     color: $light-gray;
     padding: 2rem;
+    background: none;
+    border: none;
 }
 
-a.active {
+button.active {
     color: white;
 }
