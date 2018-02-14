@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import HudMode from './HudMode';
+import EditMode from './EditMode';
 
 class LifeHud extends React.Component {
   constructor(props) {
@@ -20,6 +22,8 @@ class LifeHud extends React.Component {
     return ( 
     <div>
       <Header />
+        {this.state.page === 'HUD' && <HudMode />}
+        {this.state.page === 'EDIT' && <EditMode />}
       <Footer 
         page={this.state.page} 
         handleModeSwitch={this.handleModeSwitch}
