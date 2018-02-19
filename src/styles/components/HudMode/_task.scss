@@ -1,0 +1,24 @@
+.progressBar {
+    width: 15rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: $m-size;
+    padding-right: 15rem;
+    
+}
+
+.task__text {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    font-size: $xl-size;  
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: $xl-size;
+    
+}

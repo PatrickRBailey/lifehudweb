@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Condition from './HudMode/Condition';
+import Tasks from './HudMode/Tasks';
 
 export default class HudMode extends React.Component {
     constructor(props) {
@@ -7,8 +8,8 @@ export default class HudMode extends React.Component {
 
         this.state = {
             condition: 100,
-            todo: [1,2,3,4,5],
-            complete: [1,2,3]
+            todo: ['Shower', 'Coffee', 'Blog Posts', 'Trash Can'],
+            complete: ['Feed Fluffy', 'Exercise', 'Sleep']
         }
     }
 
@@ -41,7 +42,10 @@ export default class HudMode extends React.Component {
             <div>
                 <Condition
                 condition={this.state.condition}
-
+                 />
+                 <Tasks 
+                 todo={this.state.todo}
+                 complete={this.state.complete}
                  />
             </div>
         );
