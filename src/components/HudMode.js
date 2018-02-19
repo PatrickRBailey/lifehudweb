@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Condition from './HudMode/Condition';
 
 export default class HudMode extends React.Component {
@@ -14,13 +14,12 @@ export default class HudMode extends React.Component {
 
     calculateCondition = () => {
         let newConditon = 0;
-        if (this.tasks) {
-            const taskCount = this.tasks.count;
-            const completeCount = this.complete.count? this.complete.count * .1 : 0;
-            newConditon = taskCount * completeCount;
+        if (this.state.todo) {
+            console.log('We have todos');
+            const taskCount = this.state.todo.length;
+            const completeCount = this.state.complete.length? this.state.complete.length : 0;
+            newConditon = (completeCount/taskCount) * 100;
         }
-
-
         this.setState(() => ({
             condition: newConditon
         }));
@@ -42,7 +41,7 @@ export default class HudMode extends React.Component {
             <div>
                 <Condition
                 condition={this.state.condition}
-                calculateCondition={this.calculateCondition}
+
                  />
             </div>
         );
